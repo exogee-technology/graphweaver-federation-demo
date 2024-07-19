@@ -1,0 +1,10 @@
+version: 1
+subgraphs:
+  - name: music
+    routing_url: http://localhost:9001
+    introspection:
+      url: http://localhost:9001
+  - name: payments
+    routing_url: http://localhost:12346
+    introspection:
+      url: http://localhost:12346
