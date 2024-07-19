@@ -79,4 +79,4 @@ To get started:
 }
 ```
 
-To resolve this query, Cosmo will go to the payments graph, retrieve the payment and owner information. Graphweaver will fetch Payments (which come from PostgreSQL), and Agents (which come from REST). Once it has this result, then will use the Invoice ID it got from the payment to go to the music subgraph and retrieve invoice information using the federation `_entities` query.
+To resolve this query, Cosmo will go to the payments subgraph to retrieve the payment and owner information. Graphweaver will fetch Payments (which come from PostgreSQL), and Agents (which come from REST), join those, then give the result back to Cosmo. Once it has this result, then will use the Invoice ID it got from the payment to go to the music subgraph and retrieve invoice information using the federation v2 `_entities` query.
